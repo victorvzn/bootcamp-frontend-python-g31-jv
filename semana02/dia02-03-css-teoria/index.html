@@ -33,6 +33,54 @@
       content: '👾';
       font-size: 28px;
     }
+
+    /* SELECTORES COMBINADOS */
+
+    /* Selectores descendientes */
+
+    article {
+      background-color: aquamarine;
+    }
+
+    h2 {
+      color: red;
+    }
+
+    article h2 {
+      color: orange;
+    }
+
+    article strong {
+      color: chocolate;
+    }
+
+    /* Selector de múltiples selectores */
+
+    h1, h3, em {
+      border: 5px solid salmon;
+    }
+
+    /* Herencia */
+
+    /* Algunos estilos se heredan automáticamente y otros no lo hacen */
+
+    body {
+      color: orange;
+    }
+
+    button {
+      /* color: white; */
+      color: inherit;
+    }
+
+    a {
+      /* color: green; */
+      color: inherit;
+    }
+
+    /* Cascada */
+
+    /* Decide qué */
   </style>
 </head>
 <body>
@@ -49,6 +97,7 @@
   <section>
     <h1>Título</h1>
     <h2>Subtítulo</h2>
+    <h3>Otro subtítulo</h3>
 
     <strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo animi dolorum eum explicabo ea repellendus quasi error esse quibusdam nulla! Labore accusamus voluptatem consequuntur tempora ea architecto quam numquam assumenda.</strong>
 
