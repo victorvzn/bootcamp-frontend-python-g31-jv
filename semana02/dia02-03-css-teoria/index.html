@@ -80,7 +80,39 @@
 
     /* Cascada */
 
-    /* Decide qué */
+    /* Decide qué estilo gana cuando hay conflictos. Depende del orden, especificidad y herencia */
+
+    header {
+      color: violet;
+    }
+
+    #cabecera {
+      color: blue;
+    }
+
+    .texto {
+      color: red;
+    }
+
+    /* Unidades de medida */
+
+    /* 
+      Absolutas: px, cm, in
+
+      Relativas: em, rem, %, vw, vh (+ modernas y flexibles)
+    */
+
+    /* Colores */
+
+    h2 {
+      color: fuchsia;
+      color: #ff00ff; /* 3 números hexadecimales (red, green, blue) */
+      color: hsl(99, 92%, 37%); /* Crea un color a partir de valores de matiz(Hue), saturación(Saturation) y claridad(lightness). */
+      color: hsl(99, 92%, 37%, 0.5); /* Con trasnparencia */
+
+      color: rgb(0, 0, 255); /* 2 números decimales van entre 0 y 255 (rojo, verde, azúl) */
+      color: rgb(0, 0, 255, 0.5); /* Con trasnparencia */
+    }
   </style>
 </head>
 <body>
