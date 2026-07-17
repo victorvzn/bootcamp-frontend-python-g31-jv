@@ -56,3 +56,38 @@ main {
 }
 
 /* TODO: Terminar con los estilos de las etiquetas h1 y p aplicando colores, fuentes y tamños de letra */
+
+.content h1 {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.content p {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.content div {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.content span {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: hsl(158, 36%, 37%);
+}
+
+.content s {
+  color: hsl(228, 12%, 48%);
+}
+
+.content button {
+  
+}
