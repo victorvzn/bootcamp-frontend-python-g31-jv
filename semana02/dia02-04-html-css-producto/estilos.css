@@ -16,7 +16,7 @@ body {
 }
 
 main {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   width: 650px;
 
@@ -89,5 +89,22 @@ main {
 }
 
 .content button {
-  
+  /* border: 1px solid red; */
+
+  border: none;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+
+  padding: 14px;
+  width: 100%;
+  border-radius: 7px;
+
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 21px;
 }
