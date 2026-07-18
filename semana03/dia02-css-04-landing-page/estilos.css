@@ -32,6 +32,8 @@ a {
 
 img {
   /* TODO: RWD(RESPONSIVE WEB DESIGN) para las imágenes */
+  max-width: 100%; /* La imagen nunca será más grande que su contenedor */
+  height: auto;
 }
 
 /* UTILITARIOS  */
@@ -41,7 +43,7 @@ img {
 }
 
 .wrapper {
-  width: 1440px; /* TODO: Adaptar el ancho a dispositivos más pequeños como tablets o móviles */
+  width: min(100% - 42px, 1440px); /* TODO: Adaptar el ancho a dispositivos más pequeños como tablets o móviles */
 
   margin: 0 auto;
 }
