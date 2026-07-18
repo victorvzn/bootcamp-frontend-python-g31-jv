@@ -40,6 +40,12 @@ img {
   display: none;
 }
 
+.wrapper {
+  width: 1440px; /* TODO: Adaptar el ancho a dispositivos más pequeños como tablets o móviles */
+
+  margin: 0 auto;
+}
+
 /* HEADER */
 
 .header {
@@ -52,4 +58,16 @@ img {
   padding-top: 42px;
 
   background-color: hsl(217, 28%, 15%);
+}
+
+.header__logo {
+  
+  width: 140px;
+}
+
+.header__nav {
+  /* border: 1px solid red; */
+
+  display: flex;
+  gap: 42px; /* 42px = 14 * 3 = 3rem */
 }
