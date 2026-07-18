@@ -39,3 +39,17 @@ img {
 .hidden {
   display: none;
 }
+
+/* HEADER */
+
+.header {
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 42px;
+
+  background-color: hsl(217, 28%, 15%);
+}
