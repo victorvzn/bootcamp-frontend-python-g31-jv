@@ -184,3 +184,32 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 
   line-height: 1.6; /* 14px x 1.6 = 22.4px -> texto que ocupará aprox. cada línea de alto */
 }
+
+/* TESTIMONIALS */
+
+.testimonials {
+  border: 1px solid red;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.testimonial {
+  /* border: 1px solid yellow; */
+
+  width: 23rem; /* 23rem * 14px = 322px */
+  /* padding: TOP RIGHT BOTTOM LEFT */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: hsl(219, 30%, 18%);
+}
+
+@media (min-width: 992px) {
+  /* TODO: Adaptar los testimonias a dispositivos móviles mediante un media query */
+}
