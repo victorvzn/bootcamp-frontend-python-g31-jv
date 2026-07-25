@@ -141,10 +141,18 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   /* border: 1px solid red; */
 
   display: grid;
-  grid-template-columns: 340px 340px;
+  grid-template-columns: 340px;
   grid-template-rows: 240px 240px;
   justify-content: center;
   gap: 5rem; /* 5rem <> 14 * 5 <> 70px */
+}
+
+/* MEDIA QUERY: Se aplica a dispositivos móviles, tables o desktops segun el tamaño de la pantalla del dispositivo */
+
+@media (min-width: 992px) {
+  .features {
+    grid-template-columns: 340px 340px;
+  }
 }
 
 .feature {
@@ -170,5 +178,5 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 .feature__text {
   text-align: center;
 
-  line-height: 1.6;
+  line-height: 1.6; /* 14px x 1.6 = 22.4px -> texto que ocupará aprox. cada línea de alto */
 }
