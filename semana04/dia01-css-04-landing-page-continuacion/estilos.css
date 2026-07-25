@@ -188,22 +188,30 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 /* TESTIMONIALS */
 
 .testimonials {
-  /* border: 1px solid red; */
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
 
+.testimonials--wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 30px;
+
+  background-image: url(images/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-position: 90px -10px;
 }
 
 @media (min-width: 992px) {
   /* TODO: Adaptar los testimonias a dispositivos móviles mediante un media query */
-  .testimonials {
+  .testimonials--wrapper {
     flex-direction: row;
+
+    background-position: 240px -10px;
   }
 }
 
