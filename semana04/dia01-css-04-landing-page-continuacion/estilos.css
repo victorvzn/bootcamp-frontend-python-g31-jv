@@ -138,7 +138,7 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 /* TODO: Publicar esta página en netlify con el header, hero y sección (stay productive). Tienen hasta el domingo a la media noche (12am). Lo comparten por discord en el canal de presentaciones de la semana3 */
 
 .features {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: grid;
   grid-template-columns: 340px 340px;
@@ -148,7 +148,7 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 }
 
 .feature {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 
   display: flex;
   flex-direction: column;
@@ -160,7 +160,15 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
 /* TODO: terminar los estilos de estas clases */
 
 .feature__title {
+  text-align: center;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .feature__text {
+  text-align: center;
+
+  line-height: 1.6;
 }
