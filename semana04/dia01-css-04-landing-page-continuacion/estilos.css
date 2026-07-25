@@ -115,8 +115,6 @@ img {
 
 .hero__button {
   border: none;
-
-  background-color: hsl(176, 68%, 64%);
   border-radius: 7rem;
   padding: 1rem;
   min-width: 260px;
@@ -124,6 +122,12 @@ img {
 
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+
+  background: linear-gradient(
+    90deg,
+    hsl(176, 68%, 64%) 0%,
+    hsl(198, 60%, 50%) 100%
+  );
 }
 
 /*
