@@ -191,13 +191,20 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   border: 1px solid red;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+@media (min-width: 992px) {
+  /* TODO: Adaptar los testimonias a dispositivos móviles mediante un media query */
+  .testimonials {
+    flex-direction: row;
+  }
 }
 
 .testimonial {
@@ -210,6 +217,29 @@ TAMAÑOS DE PANTALLA SUGERIDOS:
   background-color: hsl(219, 30%, 18%);
 }
 
-@media (min-width: 992px) {
-  /* TODO: Adaptar los testimonias a dispositivos móviles mediante un media query */
+.testimonial__text {
+  font-size: 1.2rem;
+
+  margin-bottom: 2rem;
+}
+
+.testimonial__profile {
+  /* border: 1px solid red; */
+
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.testimonial__avatar {
+  border-radius: 2rem;
+}
+
+.testimonial__info h4 {
+  font-weight: 700;
+}
+
+.testimonial__info h5 {
+  font-weight: 400;
 }
