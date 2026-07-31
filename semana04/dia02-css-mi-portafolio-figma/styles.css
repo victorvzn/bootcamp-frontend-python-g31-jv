@@ -62,5 +62,34 @@ a {
 /* TODO: Terminar los estilos del header */
 
 .header {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.header__logo {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color-gold);
+}
+
+.header__menu {
+  display: flex;
+  gap: 1.5rem /* 1.5rem <> 24px <> 16px x 1.5 */;
+}
+
+.header__menu a {
+  text-transform: capitalize;
+  font-size: 1.125rem; /* 18px <> 1.125rem <> 18 / 16 */
+  font-weight: var(--font-weight-semibold);
+}
+
+.header__links {
+  display: flex;
+  gap: 1rem;
 }
