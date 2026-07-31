@@ -93,3 +93,9 @@ a {
   display: flex;
   gap: 1rem;
 }
+
+/* HERO */
+
+.hero {
+  border: 1px solid red;
+}
