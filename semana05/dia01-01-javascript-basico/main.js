@@ -223,3 +223,68 @@ function saludar() {
 saludar() // Ejecutar la función
 saludar() // Ejecutar la función
 saludar() // Ejecutar la función
+
+// Funciones con parámetros
+
+function saludoConNombre(nombre) {
+  console.log('Hola ' + nombre)
+}
+
+saludoConNombre('Victor')
+saludoConNombre()
+
+// Funciones que retornan valores
+
+function sumar(a, b) {
+  const suma = a + b
+
+  return suma // Dvuelve solo el resultado de lo que se opere
+}
+
+console.log(sumar(2, 3))
+
+
+function esPar(numero) {
+  return numero % 2 === 0  // Boolean
+}
+
+console.log(esPar(4)) // true
+console.log(esPar(7)) // false
+
+// Ejercicios
+
+// 1. Crear una función que reciba un número y devuelva el doble de ese número por consola
+// 2. Crear una función que reciba dos números y devuelva el mayor por consola
+// 3. Reutilizar el ejercicio de fizzBuzz usando funciones de tal forma que puedan llamarlo de la siguiente manera. Ej. fizzBuzz(15) -> fizzbuzz
+
+function doble(numero) {
+  return numero * 2
+}
+
+console.log(doble(8))
+console.log(doble(3))
+
+// 11. Cadena de texto
+
+// Propiedad .length
+
+console.log("Hola".length) // 4
+
+// Acceder a caracteres, cada letra tiene una posición (empieza con 0)
+
+let miNombre = 'Victor'
+
+console.log(miNombre[0]) // V
+console.log(miNombre[1]) // i
+console.log(miNombre[2]) // c
+
+// Métodos importantes de las cadenas de texto
+
+console.log(miNombre.toLowerCase()) // victor
+console.log(miNombre.toUpperCase()) // VICTOR
+console.log(miNombre.includes('ct')) // true
+
+// EJERCICIOS:
+
+// 1. Dado un string, crear una función llamada evaluarTexto que devuelva: "Largo" si tiene más de 10 caracteres y "Corto" si tiene 10 o menos.
+// 2. Dado un string, crear una función llamada invertirTexto que devuelve el texto invertido. Ej. hola -> aloh
