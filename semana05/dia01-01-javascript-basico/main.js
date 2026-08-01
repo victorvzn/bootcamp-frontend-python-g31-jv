@@ -207,3 +207,19 @@ while (j < 10) {
 // - Muestre "fizz" si el número es divisible solo entre 3.
 // - Muestre "buzz" si el número es divisible solo entre 5.
 // - En cualquier otro caso, debe mostrar el mismo número.
+
+// 10. Función
+
+// Una función es un bloque de código reutilizable que hace una tarea
+
+// ENTRADA -> [LÓGICA] -> SALIDA CON EL RESULTADO
+
+// Función básica
+
+function saludar() {
+  console.log('Hola funciones!')
+}
+
+saludar() // Ejecutar la función
+saludar() // Ejecutar la función
+saludar() // Ejecutar la función
