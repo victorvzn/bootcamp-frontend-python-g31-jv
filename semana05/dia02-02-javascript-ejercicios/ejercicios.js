@@ -4,7 +4,13 @@
 // Descripción: Retorna cuántas vocales contiene un texto dado, sin importar mayúsculas.
 
 function contarVocales(texto) {
-  return 0
+  const resultado = texto.toLowerCase().split('').filter(
+    function(letra) {
+      return 'aeiouáéíóú'.includes(letra)
+    }
+  )
+
+  return resultado.length
 }
 
 console.log('Ejercicio 1: Contar vocales')
