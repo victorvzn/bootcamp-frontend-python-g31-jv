@@ -84,3 +84,21 @@ console.log(listaDeNombres.at(-2)) // Daril
 // TODO: Otras funciones - slice (Investiguen)
 
 // MÉTODOS DE ARREGLOS (INCLUDES, FILTER, MAP, SORT, FOREACH, REDUCE)
+
+// Método INCLUDES, nos indica si el valor que se pasa como parámetro se encuentra en el arreglo y siempre devuelve un boolean(true o false)
+
+const lenguajes = ['javascript', 'php', 'python', 'C', 'c++', 'java', 'python']
+
+console.log(lenguajes.includes('java')) // true
+console.log(lenguajes.includes('cobol')) // false
+
+// Método FILTER, nos ayuda a ubicar un elemento dentro de un arreglo usando una condición y devuelve un nuevo arreglo con lo que encontró.
+
+const resultado = lenguajes.filter(function (item) {
+  // return item === 'java'
+  // return item === 'python'
+  // return item.includes('c') || item.includes('C')
+  return item.toLowerCase().includes('c')
+})
+
+console.log(resultado)
