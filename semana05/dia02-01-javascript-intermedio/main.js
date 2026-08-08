@@ -102,3 +102,58 @@ const resultado = lenguajes.filter(function (item) {
 })
 
 console.log(resultado)
+
+// Método MAP, evalue un arreglo, lo modifica y hay que pasarle una función. Nos devuelve un arreglo modificado. Siempre devuelve un nuevo arreglo.
+
+console.log(lenguajes)
+
+const nombreConTituloEspecial = lenguajes.map(function(lenguaje) {
+  // Lógica para evaluar y modificar el arreglo
+  // return 'hola'
+  return '*' + lenguaje + '*'
+})
+
+console.log(nombreConTituloEspecial)
+
+// Método SORT, nos ayuda a ordenar un arreglo de elementos. Muta(cambia) el arreglo original. User toSorted() en lugar de sort como recomendación.
+
+// const ordenandoLenguajes = lenguajes.sort() // Sort muta(cambia) el arreglo original
+const ordenandoLenguajes = lenguajes.toSorted()
+
+console.log(ordenandoLenguajes)
+console.log(lenguajes)
+
+// Método FOREACH, nos ayuda a recorrer un arreglo sin tener ningpun retorno de datos
+
+for (let index = 0; index < 10; index++) {
+  console.log(index)  
+}
+
+const miArreglo = []
+
+lenguajes.forEach(function(lenguaje) {
+  console.log('#', lenguaje)
+  miArreglo.push('El mejor: ' + lenguaje)
+})
+
+console.log(miArreglo)
+
+// Método REDUCE, nos ayuda a acumular(sumar) los valores de un arreglo
+
+const numeros = [3, 40, 102, 7, 50] // 202
+
+// Con un FOR
+
+let sumatoria = 0 // Acumulador
+
+for (let i = 0; i < numeros.length; i++) {
+  sumatoria = sumatoria + numeros[i]
+}
+
+console.log(sumatoria)
+
+const sumatoriaConReduce = numeros.reduce(function(acumulador, valorActual) {
+  return acumulador + valorActual
+}, 0)
+
+console.log(sumatoriaConReduce) // 202
