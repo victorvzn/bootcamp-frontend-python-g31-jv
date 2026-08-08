@@ -37,3 +37,33 @@ Object.freeze(listaDeValores)
 listaDeValores[8] = 'Hola a todos'
 console.log(listaDeValores)
 
+// Insertar nuevos elementos en un arreglo al final (push)
+
+const listaDeNombres = ['Daril', 'Jhoel']
+
+console.log(listaDeNombres)
+
+listaDeNombres.push('Victor')
+listaDeNombres.push('Carlos')
+
+console.log(listaDeNombres)
+
+// Remover elementos del final de un arreglo (pop)
+
+listaDeNombres.pop()
+listaDeNombres.pop()
+
+console.log(listaDeNombres)
+
+// Insertar un elemento en una posición determinada
+
+listaDeNombres.splice(0, 0, 'CÓDIGO')
+listaDeNombres.splice(2, 0, 'TECSUP')
+
+console.log(listaDeNombres)
+
+// Eliminar un elemento en un posición determinada
+
+listaDeNombres.splice(2, 1)
+
+console.log(listaDeNombres)
