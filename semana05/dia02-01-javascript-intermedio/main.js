@@ -67,3 +67,20 @@ console.log(listaDeNombres)
 listaDeNombres.splice(2, 1)
 
 console.log(listaDeNombres)
+
+// Obtener el tamaño de nuestro arreglo
+
+console.log(listaDeNombres.length) // 3
+console.log('bienvenido'.length) // 10
+
+// Obtener el último elemento del arreglo
+
+console.log(listaDeNombres[3 - 1]) // Jhoel
+console.log(listaDeNombres[listaDeNombres.length - 1]) // Jhoel
+console.log(listaDeNombres.at(0)) // CÓDIGO
+console.log(listaDeNombres.at(-1)) // Jhoel
+console.log(listaDeNombres.at(-2)) // Daril
+
+// TODO: Otras funciones - slice (Investiguen)
+
+// MÉTODOS DE ARREGLOS (INCLUDES, FILTER, MAP, SORT, FOREACH, REDUCE)
