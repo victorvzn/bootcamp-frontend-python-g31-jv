@@ -26,7 +26,19 @@
     * La información debe actualizarse sin recargar la página.
     */
 
-    
+    const contador = document.getElementById('contador')
+    const ultimaTecla = document.getElementById('ultimaTecla')
+
+    let total = 0
+
+    document.addEventListener('keydown', function(event) {
+      total = total + 1
+
+      console.log('tecla presionada!', total)
+
+      contador.textContent = total
+      ultimaTecla.textContent = event.key
+    })
   </script>
 </body>
 </html>
