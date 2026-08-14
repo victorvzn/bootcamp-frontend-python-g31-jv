@@ -30,7 +30,16 @@
     const tecla = document.getElementById('tecla')
     const caracter = document.getElementById('caracter')
 
-    
+    document.addEventListener('keydown', function(event) {
+      console.log('Presionaste una tecla!')
+
+      console.log({event})
+      console.log(event.key) // Letra presionada
+      console.log(event.keyCode) // Código ASCII
+
+      tecla.textContent = event.keyCode
+      caracter.textContent = event.key
+    })
 
     // console.log({ tecla }) // textContent
     // console.log(tecla.textContent) // Leemos el contenido de la etiqueta h3
