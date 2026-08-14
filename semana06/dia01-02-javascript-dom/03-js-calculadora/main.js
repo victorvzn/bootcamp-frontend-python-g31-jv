@@ -13,6 +13,24 @@ console.log(buttons)
 
 buttons.forEach(function(button) {
   button.addEventListener('click', function(event) {
-    console.log('Hice click!')
+    // console.log('Hice click!', event.target)
+
+    const buttonText = event.target.textContent
+
+    if ('*-+'.includes(buttonText)) {
+      // 02. Accionamos el operador
+      operador = buttonText
+      operando = Number(numeroActual)
+      numeroActual = '0'
+    } else if (buttonText === '=') {
+      // TODO: Calcular las operaciones en base al número actual y el operando
+    } else if (buttonText === 'C') {
+      // TODO: Limpiar el operando, operador y el input
+    } else {
+      // 01. Se presionó algún número
+      numeroActual = Number(numeroActual + buttonText)
+    }
+
+    inputDisplay.value = numeroActual
   })
 })
