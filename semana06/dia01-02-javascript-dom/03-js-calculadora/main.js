@@ -7,8 +7,12 @@ const inputDisplay = document.querySelector('#inputDisplay')
 // console.log({inputDisplay})
 // Consultar multiples elementos a la vez
 const buttons = document.querySelectorAll('.button')
-// console.log(buttons)
+console.log(buttons)
 
 // EVENTOS
 
-
+buttons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    console.log('Hice click!')
+  })
+})
