@@ -13,10 +13,14 @@ taskAdd.addEventListener('click', function(event) {
   // TODO: 01 - Añadir el elemento li al elemento con la clase task__list
   const li = document.createElement('li')
 
+  // TODO: 01 Añadir un checkbox al li
+
   // TODO: 02 - Añadir el elemento span al elemento li con el texto de la caja taskInput
   const span = document.createElement('span')
   span.textContent = taskInput.value
   li.appendChild(span)
+
+  //TODO: 03 Añadir el elemento button al elemento li
 
   taskList.appendChild(li)
 
