@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buscador de contactos</title>
   <style>
+    * { box-sizing: border-box; }
+    body {
+      background-color: #f1f1f1;
+
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      background-color: white;
+      border-radius: 16px;
+      padding: 16px;
+      width: 400px;
+    }
+    h1 {
+      font-size: 1.3rem;
+    }
+    #search-input {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    #contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .contact .name {
+      font-weight: 600;
+    }
+    .contact .email {
+      color: #777;
+      font-size: 0.85rem;
+    }
     .hidden {
       display: none;
     }
