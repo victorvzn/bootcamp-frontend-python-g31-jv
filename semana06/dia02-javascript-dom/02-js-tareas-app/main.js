@@ -29,6 +29,11 @@ taskAdd.addEventListener('click', function(event) {
   button.textContent = 'Borrar'
   li.appendChild(button)
 
+  // button.addEventListener('click', function(event) {
+  //   event.stopPropagation()
+  //   li.remove()
+  // })
+
   taskList.appendChild(li)
 
   taskInput.value = ''
@@ -41,3 +46,19 @@ taskAdd.addEventListener('click', function(event) {
 })
 
 // TODO: 04 permitir al botón borrar remover una tarea de la lista
+
+taskList.addEventListener('click', function(event) {
+  // console.log('Hice click en cualquier parte de la lista del ul')
+
+  const target = event.target // Elemento presionado
+
+  if (target.tagName === 'BUTTON') {
+    console.log('Eliminando tarea...')
+    target.parentElement.remove()
+  }
+
+  if (target.tagName === 'INPUT' && target.type === 'checkbox') {
+    console.log('Completando tarea...')
+    target.classList.toggle('checked')
+  }
+})
