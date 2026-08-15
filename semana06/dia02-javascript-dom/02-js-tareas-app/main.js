@@ -14,6 +14,9 @@ taskAdd.addEventListener('click', function(event) {
   const li = document.createElement('li')
 
   // TODO: 02 - Añadir el elemento span al elemento li con el texto de la caja taskInput
+  const span = document.createElement('span')
+  span.textContent = taskInput.value
+  li.appendChild(span)
 
   taskList.appendChild(li)
 
