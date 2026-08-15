@@ -14,6 +14,10 @@ taskAdd.addEventListener('click', function(event) {
   const li = document.createElement('li')
 
   // TODO: 01 Añadir un checkbox al li
+  const checkbox = document.createElement('input')
+  // checkbox.type = 'checkbox'
+  checkbox.setAttribute('type', 'checkbox')
+  li.appendChild(checkbox) // Añadiendo el checkbox dentro del li
 
   // TODO: 02 - Añadir el elemento span al elemento li con el texto de la caja taskInput
   const span = document.createElement('span')
@@ -21,8 +25,13 @@ taskAdd.addEventListener('click', function(event) {
   li.appendChild(span)
 
   //TODO: 03 Añadir el elemento button al elemento li
+  const button = document.createElement('button')
+  button.textContent = 'Borrar'
+  li.appendChild(button)
 
   taskList.appendChild(li)
+
+  taskInput.value = ''
 
   // MANEJO DEL DOM: Forma de crear elementos dinámicamente con el DOM de Javascript
   // const button = document.createElement('button')
