@@ -39,3 +39,5 @@ taskAdd.addEventListener('click', function(event) {
   // button.textContent = 'Hola soy un botón'
   // document.body.appendChild(button)
 })
+
+// TODO: 04 permitir al botón borrar remover una tarea de la lista
