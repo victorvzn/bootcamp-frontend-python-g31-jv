@@ -7,6 +7,40 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline text-amber-500">Lista de tareas</h1>
+  <main>
+    <section>
+      <h1>
+        Lista de tareas
+      </h1>
+
+      <label>
+        Ingresa una tarea
+        <input
+          type="text"
+          placeholder="Ej. Aprender Javascript"
+        >
+      </label>
+
+      <div>
+        <button>
+          Limpiar tareas completados
+        </button>
+      </div>
+
+      <ul>
+        <li>
+          <input
+            type="checkbox"
+          >
+          <div>
+            Tarea 1
+          </div>
+          <button>
+            Borrar
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
