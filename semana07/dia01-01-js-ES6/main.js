@@ -93,3 +93,20 @@ const miSuma2 = (...numeros) => {
 }
 
 miSuma2(1, 2, 3, 4, 5, 6)
+
+// SPREAD OPERATOR (...)
+// Sirve para expandir un arreglo, e incluso objetos
+
+const frutas = ['manzanas', 'naranjas', 'sandías']
+
+const verduras = ['papas', 'cebollas']
+
+console.log(frutas.concat(verduras))
+
+const frutasYVerduras = [...frutas, ...verduras]
+
+console.log(frutasYVerduras) // ['manzanas', 'naranjas', 'sandías', 'papas', 'cebollas']
+
+const persona = {
+  
+}
