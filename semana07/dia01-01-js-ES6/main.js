@@ -71,3 +71,25 @@ const saludoEnMayusculas = (nombre = 'Anónimo') => {
 
 console.log(saludoEnMayusculas())
 console.log(saludoEnMayusculas('Uzziel'))
+
+// PARÁMETROS REST (operador rest -> ...)
+// Permiten que la función reciba una cantidad indefinida de argumentos y los agrupa dentro de un array
+
+const numeros = [4, 5]
+
+const miSuma = (n1, n2) => n1 + n2
+
+console.log(miSuma(6, 7)) // 13
+console.log(miSuma(...numeros)) // 9
+
+const listaDeNumeros = [6, 33, 1, -66, 998, 453]
+
+console.log(Math.max(25, 8, 65, 9, 54))
+console.log(Math.max(...listaDeNumeros)) // 998
+
+const miSuma2 = (...numeros) => {
+  console.log(numeros)
+  // return reduce(...)
+}
+
+miSuma2(1, 2, 3, 4, 5, 6)
