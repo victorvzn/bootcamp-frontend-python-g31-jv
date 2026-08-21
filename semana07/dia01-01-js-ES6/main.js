@@ -108,5 +108,19 @@ const frutasYVerduras = [...frutas, ...verduras]
 console.log(frutasYVerduras) // ['manzanas', 'naranjas', 'sandías', 'papas', 'cebollas']
 
 const persona = {
-  
+  nombre: 'Victor',
+  edad: 40,
+  color: 'azul'
 }
+
+const stack = {
+  javascript: 'React.js',
+  python: 'Flask',
+  nodejs: 'Express.js',
+  color: 'rojo'
+}
+
+console.log({ ...persona, ...stack })
+
+console.log({ persona, stack })
+
