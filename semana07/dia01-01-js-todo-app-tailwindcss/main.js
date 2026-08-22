@@ -95,4 +95,6 @@ function checkTask(selectedIndex) {
   renderTasks(tasks)
 }
 
+// TODO: implementar el boton 'Limpiar tareas completadas' para que se remuevan las tareas que tengan el estado completed en true.
+
 renderTasks(tasks)
