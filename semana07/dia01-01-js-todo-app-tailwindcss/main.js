@@ -36,6 +36,8 @@ taskInput.addEventListener('keydown', (event) => {
   }
 })
 
+// TODO: agreguen la clase line-through para tachar el titulo de la tarea si esta está completada
+
 function renderTasks(tasks = []) {
   let lista = ''
 
@@ -45,8 +47,9 @@ function renderTasks(tasks = []) {
       <input
         type="checkbox"
         ${task.completed ? 'checked' : ''}
+        onchange="checkTask(${index})"
       >
-      <div class="w-full">  
+      <div class="w-full ${task.completed ? 'line-through text-gray-500' : ''}">  
         ${task.title}
       </div>
       <button
