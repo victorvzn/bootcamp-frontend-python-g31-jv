@@ -39,7 +39,7 @@ taskInput.addEventListener('keydown', (event) => {
 function renderTasks(tasks = []) {
   let lista = ''
 
-  tasks.forEach((task) => {
+  tasks.forEach((task, index) => {
     lista = lista + `
       <li class="flex justify-center items-center gap-4 py-1">
       <input
@@ -51,6 +51,7 @@ function renderTasks(tasks = []) {
       </div>
       <button
         class="task__clear border border-red-700 font-medium text-sm px-2 py-1 text-red-500 rounded-lg hover:text-white hover:bg-red-700 duration-300 cursor-pointer"
+        onclick="removeTask(${index})"
       >
         Borrar
       </button>
@@ -61,6 +62,12 @@ function renderTasks(tasks = []) {
   // console.log(lista)
 
   taskList.innerHTML = lista
+}
+
+function removeTask(selectedIndex) {
+  console.log(selectedIndex)
+
+  // TODO: Remover el indice seleccionado del arreglo tasks y posteriormente actualizar la lista de tareas con la función renderTasks
 }
 
 renderTasks(tasks)
