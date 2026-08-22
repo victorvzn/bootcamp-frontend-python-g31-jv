@@ -18,6 +18,12 @@ let tasks = [
   }
 ]
 
+taskInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    console.log('agregando tarea...', event.key, event.keyCode)
+  }
+})
+
 function renderTasks(tasks = []) {
   let lista = ''
 
@@ -27,7 +33,7 @@ function renderTasks(tasks = []) {
       <input
         type="checkbox"
       >
-      <div class="w-full">
+      <div class="w-full">  
         ${task.title}
       </div>
       <button
@@ -39,7 +45,7 @@ function renderTasks(tasks = []) {
     `
   });
 
-  console.log(lista)
+  // console.log(lista)
 
   taskList.innerHTML = lista
 }
