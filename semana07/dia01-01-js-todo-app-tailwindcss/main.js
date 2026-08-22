@@ -20,6 +20,11 @@ let tasks = [
 
 taskInput.addEventListener('keydown', (event) => {
   // console.log('agregando tarea...', event.key, event.keyCode)
+  // Validaciones para evitar que el usuario agregue tarea sin título
+  if (event.target.value === '') {
+    return
+  }
+
   if (event.key === 'Enter') {
     const newTask = {
       title: event.target.value,
@@ -75,6 +80,17 @@ function removeTask(selectedIndex) {
   const modifiedTasks = tasks.filter((task, index) => index !== selectedIndex)
 
   tasks = modifiedTasks
+
+  renderTasks(tasks)
+}
+
+function checkTask(selectedIndex) {
+  // Devolver un objeto que tiene title y completed
+  const taskSelected = { ...tasks[selectedIndex] }
+
+  taskSelected.completed = !taskSelected.completed
+
+  tasks[selectedIndex] = taskSelected
 
   renderTasks(tasks)
 }
