@@ -25,6 +25,8 @@ function renderTasks(tasks = []) {
     lista = lista + `<li>${task.title}</li>`
   });
 
+  console.log(lista)
+
   taskList.innerHTML = lista
 }
 
