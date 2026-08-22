@@ -97,4 +97,15 @@ function checkTask(selectedIndex) {
 
 // TODO: implementar el boton 'Limpiar tareas completadas' para que se remuevan las tareas que tengan el estado completed en true.
 
+taskClear.addEventListener('click', (event) => {
+  // const deletedTasks = tasks.filter((task) => task.completed !== true)
+  const deletedTasks = tasks.filter((task) => !task.completed)
+
+  console.log(deletedTasks)
+
+  tasks = deletedTasks
+
+  renderTasks(tasks)
+})
+
 renderTasks(tasks)
