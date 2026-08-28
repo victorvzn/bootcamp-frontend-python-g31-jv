@@ -5,4 +5,9 @@ console.log(fetch('https://jsonplaceholder.typicode.com/posts')) // Promise {<p
 // Estados de una promesa -> pending, fulfilled(OK), rejected (Falló)
 
 fetch('https://jsonplaceholder.typicode.com/posts')
-  
+  .then(response => response.json())  // Se ejecuta cuando la respuesta llegó correctamente y además convertimos la respuesta a un objeto JS
+  .then(data => {
+    console.log(data)
+    console.log(data[0])
+    console.log(data[0].title)
+  })
