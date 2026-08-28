@@ -38,8 +38,42 @@ const renderUsers = (users = []) => {
     userLists += `
       <div>
         <h2>${user.id} - ${user.name}</h2>
-        <p>${user.company.name}</p>
+        <p>Company: ${user.company.name}</p>
       </div>
     `
   })
+
+  divApp.innerHTML = userLists
 }
+
+const fetchUsersConManejoDeErrores = async () => {
+  try {
+
+    const response = await fetch(url)
+
+    console.log(response.status) // 200
+
+    if (response.status === 404) {
+      console.log('Tuvimos problemas para cargar el recurso users')
+      // return
+      throw new Error('ERROR HTTP: ' + response.status)
+    }
+
+    return await response.json()
+
+  } catch (error) {  // Menejamos errores inesperados como por ejemplo ausencia de internet
+    console.log(error)
+  }
+}
+
+fetchUsersConManejoDeErrores()
+  .then(users => {
+    console.log(users)
+    renderUsers(users)
+  })
+
+  
+// TODO: Resolver estos ejercicios
+// Mostrar un mensaje de cargando
+// Mostrar solo usuarios de una ciudad, la ciudad es a su elección
+// Mostrar cuántos usuarios hay en el listado de users
