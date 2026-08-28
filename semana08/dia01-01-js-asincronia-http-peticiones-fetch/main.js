@@ -11,3 +11,5 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     console.log(data[0])
     console.log(data[0].title)
   })
+
+// TODO: Renderizar la lista de posts del servicio jsonplaceholder con sus campos título, id y body
