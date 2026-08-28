@@ -38,3 +38,5 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     renderPosts(data)
   })
   
+// TODO: Renderizar la lista de todos del servicio jsonplaceholder con su titulo, id
+// URL: https://jsonplaceholder.typicode.com/todos
