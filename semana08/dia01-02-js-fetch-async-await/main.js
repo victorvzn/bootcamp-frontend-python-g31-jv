@@ -17,7 +17,7 @@ const fetchUserSinRetorno = async () => {
   console.log(data)
 }
 
-fetchUserSinRetorno()
+// fetchUserSinRetorno()
 
 const fetchUsersConRetorno = async () => {
   const response = await fetch(url)
@@ -25,5 +25,21 @@ const fetchUsersConRetorno = async () => {
   return await response.json()
 }
 
-fetchUsersConRetorno() // Retorna una promesa
-  .then(users => console.log(users))
+// fetchUsersConRetorno() // Retorna una promesa
+//   .then(users => console.log(users))
+
+const renderUsers = (users = []) => {
+
+  const divApp = document.querySelector('#app')
+
+  let userLists = ''
+
+  users.forEach(user => {
+    userLists += `
+      <div>
+        <h2>${user.id} - ${user.name}</h2>
+        <p>${user.company.name}</p>
+      </div>
+    `
+  })
+}
