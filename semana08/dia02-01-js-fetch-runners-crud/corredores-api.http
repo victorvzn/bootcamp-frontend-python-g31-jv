@@ -1,0 +1,13 @@
+### Listar a todos los corredores
+GET https://apibox.vercel.app/2aSCD2Sbz4kg4AcacfeJLMmalhKR3Xgs/api/corredores
+
+### Crear un corredor
+POST https://apibox.vercel.app/2aSCD2Sbz4kg4AcacfeJLMmalhKR3Xgs/api/corredores
+Content-Type: application/json
+
+{
+  "nombre": "Victor",
+  "edad": 40,
+  "categoria": "42K",
+  "dorsal": "101"
+}
