@@ -82,15 +82,24 @@ form.addEventListener('submit', async (event) => {
     body: JSON.stringify(nuevoCorredor)
   }
 
-  const response = await fetch(API_URL, opciones)
+  try {
+    const response = await fetch(API_URL, opciones)
 
-  console.log('El corredor se guardó correctamente.')
+    if (!response.ok) {
+      throw new Error('Tuvimos problemas para guardar al corredor.')
+    }
 
-  // TODO: Actualicen el listado de corredores y limpien el formulario
+    console.log('El corredor se guardó correctamente.')
 
-  cargarCorredores()
+    // TODO: Actualicen el listado de corredores y limpien el formulario
+  
+    cargarCorredores()
+  
+    corredorForm.reset()
+  } catch(error) {
+    console.log(error)
+  }
 
-  corredorForm.reset()
 })
 
 cargarCorredores()
