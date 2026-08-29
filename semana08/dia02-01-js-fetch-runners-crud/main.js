@@ -1,7 +1,5 @@
 const API_URL = 'https://apibox.vercel.app/2aSCD2Sbz4kg4AcacfeJLMmalhKR3Xgs/api/corredores'
 
-const form = document.querySelector('#form')
-
 const cargarCorredores = async () => {
   const respuesta = await fetch(API_URL)
 
@@ -50,10 +48,43 @@ const renderCorredores = (corredores = []) => {
   })
 }
 
-form.addEventListener('submit', (event) => {
+const form = document.querySelector('#form')
+
+form.addEventListener('submit', async (event) => {
   event.preventDefault()
 
-  console.log('Guardando corredor...')
+  // 01 - Extraer los datos del formulario
+  const corredorForm = document.forms['form']
+
+  const nombre = corredorForm.nombre.value
+  const edad = corredorForm.edad.value
+  const categoria = corredorForm.categoria.value
+  const dorsal = corredorForm.dorsal.value
+
+  console.log(nombre, edad, categoria, dorsal)
+
+  // 2 - Crear al corredor en el servidor
+
+  const nuevoCorredor = {
+    nombre,
+    edad,
+    categoria,
+    dorsal
+  }
+
+  const opciones = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(nuevoCorredor)
+  }
+
+  const response = await fetch(API_URL, opciones)
+
+  console.log('El corredor se guardó correctamente.')
+
+  // TODO: Actualicen el listado de corredores y limpien el formulario
 })
 
 cargarCorredores()
