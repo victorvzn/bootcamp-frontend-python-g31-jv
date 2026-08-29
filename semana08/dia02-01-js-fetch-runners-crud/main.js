@@ -1,5 +1,7 @@
 const API_URL = 'https://apibox.vercel.app/2aSCD2Sbz4kg4AcacfeJLMmalhKR3Xgs/api/corredores'
 
+const form = document.querySelector('#form')
+
 const cargarCorredores = async () => {
   const respuesta = await fetch(API_URL)
 
@@ -13,6 +15,8 @@ const renderCorredores = (corredores = []) => {
   const lista = document.querySelector('#lista')
 
   // TODO: Actualizar el número de inscritos con el id contador
+  const contador = document.querySelector('#contador')
+  contador.textContent = corredores.length
 
   corredores.forEach(corredor => {
     const li = document.createElement('li')
@@ -45,5 +49,11 @@ const renderCorredores = (corredores = []) => {
     lista.appendChild(li)
   })
 }
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+
+  console.log('Guardando corredor...')
+})
 
 cargarCorredores()
