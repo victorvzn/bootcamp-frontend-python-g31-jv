@@ -130,4 +130,6 @@ lista.addEventListener('click', async (event) => {
   }
 })
 
+// TODO: Implementar el boton actualizar de cada corredor de la lista 
+
 cargarCorredores()
