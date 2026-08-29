@@ -106,4 +106,28 @@ form.addEventListener('submit', async (event) => {
 
 })
 
+lista.addEventListener('click', async (event) => {
+  console.log({ target: event.target})
+
+  if (event.target.tagName === 'BUTTON') {
+    const confirmado = confirm('¿Eliminar a este corredor de la lista? Esta acción no se puede deshacer.')
+
+    if (!confirmado) {
+      return
+    }
+
+    const { action, id } = event.target.dataset
+
+    if (action === 'eliminar') {
+      const opciones = {
+        method: 'DELETE'
+      }
+
+      const response = await fetch(`${API_URL}/${id}`, opciones)
+
+      cargarCorredores()
+    }
+  }
+})
+
 cargarCorredores()
