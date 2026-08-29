@@ -1,9 +1,13 @@
 const API_URL = 'https://apibox.vercel.app/2aSCD2Sbz4kg4AcacfeJLMmalhKR3Xgs/api/corredores'
 
 const cargarCorredores = async () => {
+  document.querySelector('#loading').classList.toggle('hidden')
+
   const respuesta = await fetch(API_URL)
 
   const data = await respuesta.json()
+
+  document.querySelector('#loading').classList.toggle('hidden')
 
   renderCorredores(data)
 }
