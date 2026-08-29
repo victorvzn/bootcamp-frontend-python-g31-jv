@@ -12,6 +12,8 @@ const renderCorredores = (corredores = []) => {
   // TODO: Mostrar los corredores usando la plantilla del li en el index.html
   const lista = document.querySelector('#lista')
 
+  lista.innerHTML = ''
+
   // TODO: Actualizar el número de inscritos con el id contador
   const contador = document.querySelector('#contador')
   contador.textContent = corredores.length
@@ -85,6 +87,10 @@ form.addEventListener('submit', async (event) => {
   console.log('El corredor se guardó correctamente.')
 
   // TODO: Actualicen el listado de corredores y limpien el formulario
+
+  cargarCorredores()
+
+  corredorForm.reset()
 })
 
 cargarCorredores()
