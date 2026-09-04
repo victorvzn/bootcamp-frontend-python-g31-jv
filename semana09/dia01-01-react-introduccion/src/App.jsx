@@ -1,14 +1,12 @@
 // 01 - Componente base usando function
 
-function App() {
-  return <h1>Hola React.js</h1>
-}
+// function App() {
+//   return <h1>Hola React.js</h1>
+// }
 
 // const App = () => {
 //   return <h1>Hola React.js</h1>
 // }
-
-export default App
 
 // ¿Qué es un componente?
 // * Es una función, devuelve JSX, todo componente en su nombre empieza con mayúscula
@@ -23,3 +21,28 @@ export default App
 // * Un solo elemente padre
 // * Es recomendable que la función tenga el mismo nombre del archivo. Ej. App.jsx -> App
 
+// 02 - Componente usando múltiples líneas
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>React.js</h1>
+//       <p>Estamos aprendiendo sobre componentes.</p>
+//     </div>
+//   )
+// }
+
+// 03 - Componente usando Fragments (<></>)
+
+function App() {
+  return (
+    <>
+      <h1>React.js</h1>
+      <p>Estamos aprendiendo sobre componentes.</p>
+    </>
+  )
+}
+
+export default App
+
+// 04 - Extensiones de VSCODE para usar con React.js
