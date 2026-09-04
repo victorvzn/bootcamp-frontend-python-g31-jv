@@ -59,11 +59,32 @@
 
 // snippet: rafce
 
+// const App = () => {
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// 05 - Anidar componentes dentro de otros
+
+function ComponenteSaludo() {
+  return <h4>Hola a todos!</h4>
+}
+
+function ComponenteDespedida() {
+  return <h4>Adios a todos!</h4>
+}
+
 const App = () => {
   return (
-    <div>App</div>
+    <section>
+      <h3>Componentes anidados</h3>
+
+      <ComponenteSaludo />
+
+      <ComponenteDespedida />
+    </section>
   )
 }
 
 export default App
-
