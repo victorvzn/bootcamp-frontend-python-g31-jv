@@ -67,22 +67,39 @@
 
 // 05 - Anidar componentes dentro de otros
 
-function ComponenteSaludo() {
-  return <h4>Hola a todos!</h4>
-}
+// function ComponenteSaludo() {
+//   return <h4>Hola a todos!</h4>
+// }
 
-function ComponenteDespedida() {
-  return <h4>Adios a todos!</h4>
-}
+// function ComponenteDespedida() {
+//   return <h4>Adios a todos!</h4>
+// }
+
+// const App = () => {
+//   return (
+//     <section>
+//       <h3>Componentes anidados</h3>
+
+//       <ComponenteSaludo />
+
+//       <ComponenteDespedida />
+//     </section>
+//   )
+// }
+
+
+// 06 - Importando componentes externos
+
+import ComponenteSaludo from "./components/ComponenteSaludo"
+
+// TODO: Crear el componente ComponenteDespedida en su propio archivo e importarlo en el componente App
 
 const App = () => {
   return (
     <section>
-      <h3>Componentes anidados</h3>
+      <h3>Componenentes externos</h3>
 
       <ComponenteSaludo />
-
-      <ComponenteDespedida />
     </section>
   )
 }
