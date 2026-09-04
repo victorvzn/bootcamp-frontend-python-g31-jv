@@ -34,15 +34,36 @@
 
 // 03 - Componente usando Fragments (<></>)
 
-function App() {
+// function App() {
+//   return (
+//     <>
+//       <h1>React.js</h1>
+//       <p>Estamos aprendiendo sobre componentes.</p>
+//     </>
+//   )
+// }
+
+// 04 - Extensiones de VSCODE para usar con React.js
+// ES7+ React/Redux/React-Native snippets
+// https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+
+// Snippets para crear componentes (rfc, rafce)
+
+// snippet: rfc
+
+// function App() {
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// snippet: rafce
+
+const App = () => {
   return (
-    <>
-      <h1>React.js</h1>
-      <p>Estamos aprendiendo sobre componentes.</p>
-    </>
+    <div>App</div>
   )
 }
 
 export default App
 
-// 04 - Extensiones de VSCODE para usar con React.js
