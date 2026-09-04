@@ -91,6 +91,7 @@
 // 06 - Importando componentes externos
 
 import ComponenteSaludo from "./components/ComponenteSaludo"
+import ComponenteDespedida from "./components/ComponenteDespedida.jsx"
 
 // TODO: Crear el componente ComponenteDespedida en su propio archivo e importarlo en el componente App
 
@@ -100,6 +101,8 @@ const App = () => {
       <h3>Componenentes externos</h3>
 
       <ComponenteSaludo />
+
+      <ComponenteDespedida />
     </section>
   )
 }
