@@ -1,3 +1,4 @@
+import Contador from "./components/Contador"
 import MostrarTexto from "./components/MostrarTexto"
 
 const App = () => {
@@ -8,6 +9,8 @@ const App = () => {
       </h1>
 
       <MostrarTexto />
+      
+      <Contador />
     </section>
   )
 }
