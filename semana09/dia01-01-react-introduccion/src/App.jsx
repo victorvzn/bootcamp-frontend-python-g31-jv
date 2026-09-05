@@ -90,23 +90,39 @@
 
 // 06 - Importando componentes externos
 
-import ComponenteSaludo from "./components/ComponenteSaludo"
-import ComponenteDespedida from "./components/ComponenteDespedida.jsx"
+// import ComponenteSaludo from "./components/ComponenteSaludo"
+// import ComponenteDespedida from "./components/ComponenteDespedida.jsx"
 
-// TODO: Crear el componente ComponenteDespedida en su propio archivo e importarlo en el componente App
+// // TODO: Crear el componente ComponenteDespedida en su propio archivo e importarlo en el componente App
+
+// const App = () => {
+//   return (
+//     <section>
+//       <h3>Componenentes externos</h3>
+
+//       <ComponenteSaludo />
+
+//       <ComponenteDespedida />
+//     </section>
+//   )
+// }
+
+// 07 - Usando expresiones con JSX -> "{}"
 
 const App = () => {
+  // Lógica del componente
+  const suma = 8 + 9
+  const nombre = 'Victor'
+
   return (
     <section>
-      <h3>Componenentes externos</h3>
+      <h1>Usando expresiones con jsx</h1>
 
-      <ComponenteSaludo />
-
-      <ComponenteDespedida />
+      <p>{suma}</p>
+      <p>{1 + 2 * 9 ** 2}</p>
+      <p>{nombre}</p>
     </section>
   )
 }
 
 export default App
-
-// 07 - Usando expresiones con JSX -> "{}"
