@@ -143,11 +143,41 @@
 
 // export default App
 
-// 09 - Propiedaes de un componente (Ahora el componente será reutilizable)
+// 09 - Propiedades de un componente (Ahora el componente será reutilizable)
+
+// const BienvenidaPersonalizada = (props) => {
+//   return <h3>Hola {props.nombre}, tu edad es {props.edad ?? '0'} años.</h3>
+// }
+
+// const App = () => {
+//   return (
+//     <section>
+//       <h4>Propiedades de un componente</h4>
+
+//       <BienvenidaPersonalizada nombre="Victor" edad="40" />
+//       <BienvenidaPersonalizada nombre="Sofia" edad="33" />
+//       <BienvenidaPersonalizada nombre="Sofia" />
+//     </section>
+//   )
+// }
+
+// export default App
+
+// 10 - Propiedades de un componente (Con destructuring)
+
+const BienvenidaPersonalizada = ({ nombre, edad, color = 'rojo' }) => {
+  return <h3>Hola {nombre}, tu edad es {edad ?? '0'} años, y tu color favorito es el {color}</h3>
+}
 
 const App = () => {
   return (
-    <div>App</div>
+    <section>
+      <h4>Propiedades de un componente (Con destructuring)</h4>
+
+      <BienvenidaPersonalizada nombre="Victor" edad="40" color="Amarillo" />
+      <BienvenidaPersonalizada nombre="Sofia" edad="33" />
+      <BienvenidaPersonalizada nombre="Sofia" />
+    </section>
   )
 }
 
