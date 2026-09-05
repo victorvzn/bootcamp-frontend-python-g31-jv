@@ -109,35 +109,45 @@
 
 // 07 - Usando expresiones con JSX -> "{}"
 
-import nombreExportado, { frutas, curso } from "./modulo.js"
+// import nombreExportado, { frutas, curso } from "./modulo.js"
+
+// const App = () => {
+//   // Lógica del componente
+//   const suma = 8 + 9
+//   const nombre = 'Victor'
+
+//   // Comentario en React.js van dentro del cuerpo de la función
+//   /* Otro comentario multilínea dentro del cuerpo de la función */
+
+//   return (
+//     <section>
+//       <h1>Usando expresiones con jsx</h1>
+
+//       <p>{suma}</p>
+//       <p>{1 + 2 * 9 ** 2}</p>
+//       <p>{nombre}</p>
+
+//       <p>Hola {nombre}</p>
+//       <p>{`Hola ${nombre}`}</p>
+
+//       {/* Comentario en React.js dentro del JSX */}
+
+//       <p>{frutas}</p>
+//       <p>{nombreExportado}</p>
+//       <p>{JSON.stringify(curso)}</p>
+//       <p>{curso.nombre}</p>
+//       <p>{curso.nota}</p>
+//     </section>
+//   )
+// }
+
+// export default App
+
+// 09 - Propiedaes de un componente (Ahora el componente será reutilizable)
 
 const App = () => {
-  // Lógica del componente
-  const suma = 8 + 9
-  const nombre = 'Victor'
-
-  // Comentario en React.js van dentro del cuerpo de la función
-  /* Otro comentario multilínea dentro del cuerpo de la función */
-
   return (
-    <section>
-      <h1>Usando expresiones con jsx</h1>
-
-      <p>{suma}</p>
-      <p>{1 + 2 * 9 ** 2}</p>
-      <p>{nombre}</p>
-
-      <p>Hola {nombre}</p>
-      <p>{`Hola ${nombre}`}</p>
-
-      {/* Comentario en React.js dentro del JSX */}
-
-      <p>{frutas}</p>
-      <p>{nombreExportado}</p>
-      <p>{JSON.stringify(curso)}</p>
-      <p>{curso.nombre}</p>
-      <p>{curso.nota}</p>
-    </section>
+    <div>App</div>
   )
 }
 
