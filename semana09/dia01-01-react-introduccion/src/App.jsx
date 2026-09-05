@@ -174,8 +174,8 @@ const App = () => {
     <section>
       <h4>Propiedades de un componente (Con destructuring)</h4>
 
-      <BienvenidaPersonalizada nombre="Victor" edad="40" color="Amarillo" />
-      <BienvenidaPersonalizada nombre="Sofia" edad="33" />
+      <BienvenidaPersonalizada nombre="Victor" edad={40} color="Amarillo" />
+      <BienvenidaPersonalizada nombre="Sofia" edad={33} />
       <BienvenidaPersonalizada nombre="Sofia" />
     </section>
   )
