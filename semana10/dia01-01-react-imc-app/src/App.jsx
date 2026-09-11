@@ -25,7 +25,13 @@ const App = () => {
   // Menor a 25.0 - 29.9 -> Sobrepeso
   // Menor a > 30.0 -> Obesidad
 
-  const imcResultado = ''
+  const imcResultado = () => {
+    if (imcDecimal < 18.5) return 'Bajo peso'
+    if (imcDecimal < 25) return 'Peso saludable'
+    if (imcDecimal < 30) return 'Sobrepeso'
+
+    return 'Obesidad'
+  }
 
   return (
     <section className="w-[400px] bg-slate-200 p-4 mt-8 mx-auto rounded-md">
@@ -55,7 +61,15 @@ const App = () => {
 
       <p className="font-bold mt-4">Tu IMC es {imcDecimal}</p>
 
-      <p className="font-bold text-2xl">ESTADO de IMC: {imcResultado}</p>
+      <p className="font-bold text-2xl">ESTADO de IMC: {imcResultado()}</p>
+
+      <p>
+        {/* Renderizado condicional ( NO es recomendable pero se puede usar, lo dejo como ejemplo) */}
+        {imcDecimal < 18.5 && 'Bajo peso'}
+        {imcDecimal >= 18.5 && imcDecimal < 25 && 'Peso saludable'}
+        {imcDecimal >= 25 && imcDecimal < 30 && 'Sobrepeso'}
+        {imcDecimal >= 30 && 'Obesidad'}
+      </p>
     </section>
   )
 }
