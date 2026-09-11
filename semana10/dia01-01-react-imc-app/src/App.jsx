@@ -11,6 +11,22 @@ const App = () => {
 
   // TODO: Actualicen la altura en la etiqueta del rango "Altura: 0 cm" usando el estado altura.
 
+  const handleAltura = (event) => {
+    setAltura(event.target.value)
+  }
+
+  const imc = peso / ((altura /100) ** 2)
+
+  const imcDecimal = imc.toFixed(2)
+
+  // TODO: Según el IMC mostrar los siguientes valores:
+  // Menor a < 18.5 -> Bajo peso
+  // Menor a 18.5 - 24.9 -> Peso saludable
+  // Menor a 25.0 - 29.9 -> Sobrepeso
+  // Menor a > 30.0 -> Obesidad
+
+  const imcResultado = ''
+
   return (
     <section className="w-[400px] bg-slate-200 p-4 mt-8 mx-auto rounded-md">
       <h1 className="text-3xl text-sky-600 text-center font-bold">IMC APP</h1>
@@ -33,12 +49,13 @@ const App = () => {
           min="50"
           max="200"
           className="w-full"
+          onChange={handleAltura}
         />
       </div>
 
-      <p className="font-bold mt-4">Tu IMC es 0.00</p>
+      <p className="font-bold mt-4">Tu IMC es {imcDecimal}</p>
 
-      <p className="font-bold text-2xl">ESTADO de IMC: ????</p>
+      <p className="font-bold text-2xl">ESTADO de IMC: {imcResultado}</p>
     </section>
   )
 }
