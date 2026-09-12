@@ -31,6 +31,32 @@ const App = () => {
 
     console.log('Guardando...')
 
+    if (form.id) { // Actualizar un estudiante
+      const updatedStudents = students.map(student => {
+        if (student.id === form.id) {
+          return {
+            ...student,
+            name: form.name,
+            city: form.city
+          }
+        }
+
+        return student
+      })
+      
+      setStudents(updatedStudents)
+
+      setForm({
+        id: '',
+        name: '',
+        city: ''
+      })
+
+      return
+    }
+    
+    // Creando un nuevo estudiante
+
     const newStudent = {
       id: crypto.randomUUID(),
       name: form.name,
@@ -60,6 +86,25 @@ const App = () => {
     })
 
     setStudents(updatedStudents)
+  }
+
+  // TODO: Implementar el boton editar y el boton save del formulario
+
+  const handleEdit = (student) => {
+    console.log('Actualizando', student)
+    setForm({
+      id: student.id,
+      name: student.name,
+      city: student.city
+    })
+  }
+
+  const handleClear = () => {
+    setForm({
+      id: '',
+      name: '',
+      city: ''
+    })
   }
 
   return (
@@ -104,8 +149,9 @@ const App = () => {
           />
           <input
             className="bg-slate-500 text-white hover:bg-slate-600 font-medium rounded-lg text-sm w-full px-4 py-2 text-center cursor-pointer"
-            type="reset"
+            type="button"
             value="Clear"
+            onClick={handleClear}
           />
         </div>
       </form>
@@ -125,7 +171,7 @@ const App = () => {
               <div className="text-left">{student.name}</div>
               <div className="text-left">{student.city}</div>
               <div className="flex gap-2">
-                <button>✏</button>
+                <button onClick={() => handleEdit(student)}>✏</button>
                 <button onClick={() => handleDelete(student.id)}>❌</button>
               </div>
             </div>
