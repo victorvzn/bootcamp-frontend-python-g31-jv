@@ -1,4 +1,26 @@
+import { useState } from "react"
+
 const App = () => {
+  const DEFAULT_STUDENTS = [
+    {
+      id: '1',
+      name: 'Bulma',
+      city: 'Chiclayo'
+    },
+    {
+      id: '2',
+      name: 'Goku',
+      city: 'Lima'
+    },
+    {
+      id: '3',
+      name: 'Vegeta',
+      city: 'Trujillo'
+    }
+  ]
+
+  const [students, setStudents] = useState(DEFAULT_STUDENTS)
+
   return (
     <main className="w-96 mx-auto border border-slate-400 rounded-lg mt-6 p-4">
       <h1 className="text-2xl text-center text-slate-700 font-bold mb-4">Student CRUD</h1>
@@ -47,18 +69,24 @@ const App = () => {
       <section className="mt-4 flex flex-col gap-2">
         <div className="flex justify-between items-center gap-2 bg-slate-300 px-4 py-2 rounded-lg ">
           <div className="text-left">Name</div>
-          <div className="text-left">city</div>
+          <div className="text-left">City</div>
           <div className="flex gap-2">Actions</div>
         </div>
 
-        <div className="flex justify-between items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg">
-          <div className="text-left">Student 1</div>
-          <div className="text-left">Chiclayo</div>
-          <div className="flex gap-2">
-             <button>✏</button>
-             <button>❌</button>
-          </div>
-        </div>
+        {students.map(student => {
+          return (
+            <div className="flex justify-between items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg">
+              <div className="text-left">{student.name}</div>
+              <div className="text-left">{student.city}</div>
+              <div className="flex gap-2">
+                <button>✏</button>
+                <button>❌</button>
+              </div>
+            </div>
+          )
+        })}
+
+        <pre>{JSON.stringify(students, null, 2)}</pre>
       </section>
     </main>
   )
