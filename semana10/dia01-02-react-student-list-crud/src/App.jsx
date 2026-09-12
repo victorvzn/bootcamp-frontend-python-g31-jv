@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import Swal from 'sweetalert2'
+
 const App = () => {
   const DEFAULT_STUDENTS = [
     {
@@ -81,11 +83,23 @@ const App = () => {
   const handleDelete = (id) => {
     console.log('Eliminando', id)
 
-    const updatedStudents = students.filter(student => {
-      return student.id !== id
-    })
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const updatedStudents = students.filter(student => {
+          return student.id !== id
+        })
 
-    setStudents(updatedStudents)
+        setStudents(updatedStudents)
+      }
+    });
   }
 
   // TODO: Implementar el boton editar y el boton save del formulario
