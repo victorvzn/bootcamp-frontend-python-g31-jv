@@ -30,6 +30,20 @@ const App = () => {
     event.preventDefault()
 
     console.log('Guardando...')
+
+    const newStudent = {
+      id: crypto.randomUUID(),
+      name: form.name,
+      city: form.city
+    }
+
+    setStudents([...students, newStudent])
+
+    setForm({
+      id: '',
+      name: '',
+      city: ''
+    })
   }
 
   const handleChange = (event) => {
@@ -55,6 +69,7 @@ const App = () => {
             placeholder="Ex. Victor Villazón"
             required
             onChange={handleChange}
+            value={form.name}
           />
         </label>
 
@@ -67,6 +82,7 @@ const App = () => {
             placeholder="Ex. Chiclayo"
             required
             onChange={handleChange}
+            value={form.city}
           />
         </label>
 
