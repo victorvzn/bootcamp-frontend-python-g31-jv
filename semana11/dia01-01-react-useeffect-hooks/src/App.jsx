@@ -30,6 +30,5 @@ export default function App() {
       <button onClick={() => setCount(count + 1)}>+1</button>
 
     </div>
-    
   )
 }
