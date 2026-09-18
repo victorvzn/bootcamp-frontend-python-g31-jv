@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 import Swal from 'sweetalert2'
-import { fetchStudents } from "./services/students"
+import { createStudent, fetchStudents } from "./services/students"
 
 const App = () => {
   const [students, setStudents] = useState([])
@@ -53,16 +53,16 @@ const App = () => {
     // Creando un nuevo estudiante
 
     const newStudent = {
-      id: crypto.randomUUID(),
       name: form.name,
       city: form.city
     }
 
-    const updatedStudents = [...students, newStudent]
-
-    setStudents(updatedStudents)
-
-    localStorage.setItem('STUDENTS', JSON.stringify(updatedStudents))
+    createStudent(newStudent)
+      .then(() => {
+        fetchStudents()
+          .then(data => setStudents(data))
+      })
+    
 
     setForm({
       id: '',
