@@ -4,6 +4,7 @@ import PublicLayout from './layouts/PublicLayout.jsx'
 import ProtectedLayout from './layouts/ProtectedLayout.jsx'
 
 import Login from './pages/Login.jsx'
+import Login2 from './pages/Login2.jsx'
 import Home from './pages/Home.jsx'
 import NotFound from './pages/NotFound.jsx'
 
@@ -14,11 +15,12 @@ export default function App() {
         {/* Pantallas públicas: usan el Layout + Header por defecto */}
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Login />} />
+          <Route path="/login2" element={<Login2 />} />
         </Route>
 
         {/* Pantallas privadas: usan el ProtectedLayout + PrivateHeader */}
         <Route element={<ProtectedLayout />}>
-          <Route path="/app" element={<Home />} />
+          <Route path="/home" element={<Home />} />
         </Route>
 
         {/* Redirección y 404 */}
