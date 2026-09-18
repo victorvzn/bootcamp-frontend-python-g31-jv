@@ -7,3 +7,17 @@ export const fetchStudents = async () => {
 }
 
 // TODO: crear la función createStudent que haga un post al recurso students
+
+export const createStudent = async (payload) => {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  }
+
+  const response = await fetch(API_URL, options)
+
+  return await response.json()
+} 
