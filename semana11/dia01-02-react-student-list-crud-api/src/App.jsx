@@ -63,7 +63,6 @@ const App = () => {
           .then(data => setStudents(data))
       })
     
-
     setForm({
       id: '',
       name: '',
