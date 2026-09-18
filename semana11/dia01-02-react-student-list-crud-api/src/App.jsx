@@ -22,6 +22,8 @@ const App = () => {
 
     console.log('Guardando...')
 
+    // TODO: Implementar el guardado del estudiante cuando este ya existe
+
     if (form.id) { // Actualizar un estudiante
       const updatedStudents = students.map(student => {
         if (student.id === form.id) {
@@ -35,7 +37,6 @@ const App = () => {
         return student
       })
 
-      // TODO: Crear un registro en el recurso students y posteriormente actualizar el listado de estudiantes
       
       setStudents(updatedStudents)
 
@@ -51,6 +52,8 @@ const App = () => {
     }
     
     // Creando un nuevo estudiante
+
+    // TODO: Crear un registro en el recurso students y posteriormente actualizar el listado de estudiantes
 
     const newStudent = {
       name: form.name,
