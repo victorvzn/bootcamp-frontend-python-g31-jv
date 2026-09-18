@@ -34,6 +34,8 @@ const App = () => {
 
         return student
       })
+
+      // TODO: Crear un registro en el recurso students y posteriormente actualizar el listado de estudiantes
       
       setStudents(updatedStudents)
 

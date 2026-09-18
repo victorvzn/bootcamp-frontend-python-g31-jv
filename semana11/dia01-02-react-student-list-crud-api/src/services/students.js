@@ -5,3 +5,5 @@ export const fetchStudents = async () => {
 
   return await response.json()
 }
+
+// TODO: crear la función createStudent que haga un post al recurso students
