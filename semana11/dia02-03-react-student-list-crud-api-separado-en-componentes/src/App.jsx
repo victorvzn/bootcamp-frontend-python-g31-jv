@@ -6,6 +6,7 @@ import Form from "./components/Form"
 
 const App = () => {
   const [students, setStudents] = useState([])
+  const [studentToEdit, setStudentToEdit] = useState(null)
 
   useEffect(() => {
     console.log('Cargando students...')
@@ -41,7 +42,7 @@ const App = () => {
 
   const handleEdit = (student) => {
     console.log('Actualizando', student)
-    setForm({
+    setStudentToEdit({
       id: student.id,
       name: student.name,
       city: student.city
@@ -62,7 +63,7 @@ const App = () => {
     <main className="w-96 mx-auto border border-slate-400 rounded-lg mt-6 p-4">
       <h1 className="text-2xl text-center text-slate-700 font-bold mb-4">Student CRUD</h1>
 
-      <Form onSubmit={handleSubmit} />
+      <Form onSubmit={handleSubmit} studentToEdit={studentToEdit} />
 
       <h2 className="text-center text-slate-700 font-bold my-4">Student list</h2>
 

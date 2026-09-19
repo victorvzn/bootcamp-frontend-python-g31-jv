@@ -1,11 +1,21 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const Form = ({ onSubmit }) => {
+const Form = ({ onSubmit, studentToEdit }) => {
   const [form, setForm] = useState({
     id: '',
     name: '',
     city: ''
   })
+
+  useEffect(() => {
+    if(studentToEdit) {
+      setForm({
+        id: studentToEdit.id,
+        name: studentToEdit.name,
+        city: studentToEdit.city
+      })
+    }
+  }, [studentToEdit])
 
   const handleChange = (event) => {
     const { name, value } = event.target
