@@ -48,8 +48,14 @@ const App = () => {
     })
   }
 
-  const handleSubmit = () => {
-    console.log('Hola Submit')
+  const handleSubmit = (newStudent) => {
+    console.log('Hola Submit', newStudent)
+
+    createStudent(newStudent)
+      .then(() => {
+        fetchStudents()
+          .then(data => setStudents(data))
+      })
   }
 
   return (

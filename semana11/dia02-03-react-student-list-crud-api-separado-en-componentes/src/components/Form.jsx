@@ -59,12 +59,7 @@ const Form = ({ onSubmit }) => {
       city: form.city
     }
 
-    // createStudent(newStudent)
-    //   .then(() => {
-    //     fetchStudents()
-    //       .then(data => setStudents(data))
-    //   })
-    onSubmit()
+    onSubmit(newStudent)
     
     setForm({
       id: '',
