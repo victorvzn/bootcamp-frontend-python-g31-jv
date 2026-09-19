@@ -1,4 +1,6 @@
 const App = () => {
+  // TODO: Darle la funcionalidad completa a este componente. Implementar el CRUD completo(Lista, crear, actualizar y eliminar) usando el apibox
+
   return (
     <div className="bg-white text-neutral-900 min-h-screen">
 
