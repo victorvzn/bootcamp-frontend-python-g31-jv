@@ -49,10 +49,20 @@ const App = () => {
     })
   }
 
-  const handleSubmit = (newStudent) => {
-    console.log('Hola Submit', newStudent)
+  const handleSubmit = (student, id) => {
+    console.log('Hola Submit', student)
 
-    createStudent(newStudent)
+    if (id) {
+      updateStudent(student, id)
+        .then(() => {
+          fetchStudents()
+            .then(data => setStudents(data))
+        })
+      
+      return // IMportante para que ya no se cree un nuevo estudiante en la siguiente línea
+    }
+
+    createStudent(student)
       .then(() => {
         fetchStudents()
           .then(data => setStudents(data))

@@ -44,12 +44,7 @@ const Form = ({ onSubmit, studentToEdit }) => {
         city: form.city,
       }
 
-      // updateStudent(student, form.id)
-      //   .then(() => {
-      //     fetchStudents()
-      //       .then(data => setStudents(data))
-      //   })
-      onSubmit()
+      onSubmit(student, form.id)
 
       setForm({
         id: '',
