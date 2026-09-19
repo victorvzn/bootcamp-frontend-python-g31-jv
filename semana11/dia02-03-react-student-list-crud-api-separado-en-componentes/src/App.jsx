@@ -48,11 +48,15 @@ const App = () => {
     })
   }
 
+  const handleSubmit = () => {
+    console.log('Hola Submit')
+  }
+
   return (
     <main className="w-96 mx-auto border border-slate-400 rounded-lg mt-6 p-4">
       <h1 className="text-2xl text-center text-slate-700 font-bold mb-4">Student CRUD</h1>
 
-      <Form />
+      <Form onSubmit={handleSubmit} />
 
       <h2 className="text-center text-slate-700 font-bold my-4">Student list</h2>
 

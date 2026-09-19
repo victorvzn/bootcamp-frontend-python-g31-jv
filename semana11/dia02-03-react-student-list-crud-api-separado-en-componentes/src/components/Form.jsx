@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Form = () => {
+const Form = ({ onSubmit }) => {
   const [form, setForm] = useState({
     id: '',
     name: '',
@@ -34,11 +34,12 @@ const Form = () => {
         city: form.city,
       }
 
-      updateStudent(student, form.id)
-        .then(() => {
-          fetchStudents()
-            .then(data => setStudents(data))
-        })
+      // updateStudent(student, form.id)
+      //   .then(() => {
+      //     fetchStudents()
+      //       .then(data => setStudents(data))
+      //   })
+      onSubmit()
 
       setForm({
         id: '',
@@ -58,11 +59,12 @@ const Form = () => {
       city: form.city
     }
 
-    createStudent(newStudent)
-      .then(() => {
-        fetchStudents()
-          .then(data => setStudents(data))
-      })
+    // createStudent(newStudent)
+    //   .then(() => {
+    //     fetchStudents()
+    //       .then(data => setStudents(data))
+    //   })
+    onSubmit()
     
     setForm({
       id: '',
