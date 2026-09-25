@@ -6,13 +6,14 @@ const ProductDetailPage = () => {
 
   const [product, setProduct] = useState()
 
-  // TODO: Imprimir los datos del producto(ej. title, descripción, price, thumbnail 7 y marca) en el return de este producto
+  // TODO: Imprimir los datos del producto(ej. title, descripción, price, thumbnail y marca) en el return de este producto
 
   return (
     <main>
       <Link to="/products">Regresar al listado de productos</Link>
 
       <ul>
+        <li className="font-bold">ID: {id}</li>
         <li className="font-bold">{product?.title}</li>
         <li>{product?.description}</li>
         <li>S/ {product?.price}</li>
