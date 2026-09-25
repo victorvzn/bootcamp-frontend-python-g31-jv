@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import { Link } from "react-router"
+
 const ProductList = () => {
   const [products, setProducts] = useState([])
 
@@ -26,6 +28,7 @@ const ProductList = () => {
             <li>
               <h4 className="font-medium">{product.title}</h4>
               <p className="font-light">{product.description}</p>
+              <Link to={`/products/${product.id}`}>Ver más</Link>
               <img src={product.thumbnail} />
             </li>
           )
