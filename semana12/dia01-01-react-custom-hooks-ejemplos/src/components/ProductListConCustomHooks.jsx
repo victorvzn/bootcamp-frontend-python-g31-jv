@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const ProductList = () => {
+const useProducts = () => {
   const [products, setProducts] = useState([])
 
   const fetchProducts = async () => { // Retorna una promesa
@@ -16,9 +16,17 @@ const ProductList = () => {
       .then(data => setProducts(data.products))
   }, [])
 
+  return {
+    products
+  }
+}
+
+const ProductListConCustomHooks = () => {
+  const { products } = useProducts()
+
   return (
-    <div className="bg-amber-100 p-4">
-      <h2 className="text-2xl text-center py-4">Product list</h2>
+    <div className="bg-green-100 p-4">
+      <h2 className="text-2xl text-center py-4">Product list (Custom hooks)</h2>
 
       <ul>
         {products.map(product => {
@@ -37,4 +45,4 @@ const ProductList = () => {
   )
 }
 
-export default ProductList
+export default ProductListConCustomHooks

@@ -1,6 +1,8 @@
 import Counter from "./components/Counter"
 import CounterConCustomHooks from "./components/CounterConCustomHooks"
+
 import ProductList from "./components/ProductList"
+import ProductListConCustomHooks from "./components/ProductListConCustomHooks"
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
       <CounterConCustomHooks />
 
       <ProductList />
+
+      <ProductListConCustomHooks />
     </main>
   )
 }
