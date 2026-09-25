@@ -7,10 +7,10 @@ const App = () => {
 
       <p className="">Es una función de Javascript que reutiliza lógica de React entre diferentes componentes.</p>
 
-      <ul>
-        <li className="list-disc">No es un componente ❌</li>
-        <li className="list-disc">No devuelve JSX necesariamente</li>
-        <li className="list-disc">Es un función que puede utilizar otros hooks (useState, useEffect, customHooks, etc).</li>
+      <ul className="list-disc list-inside">
+        <li>No es un componente ❌</li>
+        <li>No devuelve JSX necesariamente</li>
+        <li>Es un función que puede utilizar otros hooks (useState, useEffect, customHooks, etc).</li>
       </ul>
 
       <Counter />
