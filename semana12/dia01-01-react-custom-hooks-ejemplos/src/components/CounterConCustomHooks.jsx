@@ -1,17 +1,11 @@
-import { useState } from "react"
+import { useCounter } from "../hooks/useCounter"
 
-// ANTES DE USAR CUSTOM HOOKS USANDO USESTATE
-
-const Counter = () => {
-  const [contador, setContador] = useState(99)
-
-  const decrement = () => setContador(contador - 1)
-
-  const increment = () => setContador(contador + 1)
+const CounterConCustomHooks = () => {
+  const { contador, decrement, increment } = useCounter()
 
   return (
     <div className="bg-slate-200 p-4 border">
-      <h3 className="text-2xl">Contador</h3>
+      <h3 className="text-2xl">Contador (Custom hooks)</h3>
 
       <div className="flex gap-2">
         <button className="bg-blue-400 px-3 py-2" onClick={decrement}>-</button>
@@ -22,4 +16,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default CounterConCustomHooks

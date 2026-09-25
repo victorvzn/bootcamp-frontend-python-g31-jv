@@ -1,4 +1,5 @@
 import Counter from "./components/Counter"
+import CounterConCustomHooks from "./components/CounterConCustomHooks"
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
       </ul>
 
       <Counter />
+
+      <CounterConCustomHooks />
 
     </main>
   )
