@@ -6,6 +6,7 @@ import App from './App.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 
 import HomePage from './pages/HomePage.jsx'
+import ProductsPage from './pages/ProductsPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
 
       <Route path='/' element={<HomePage />} />
       <Route path='/prueba' element={<App />} />
+      <Route path='/products' element={<ProductsPage />} />
 
       {/* TODO: Crear un ruta llamada "/acerca-de-mi" con sus nombre y apellidos */}
 
