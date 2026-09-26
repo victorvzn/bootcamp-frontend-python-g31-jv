@@ -8,13 +8,17 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import HomePage from './pages/HomePage.jsx'
 import ProductsPage from './pages/ProductsPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage.jsx'
+import LayoutBase from './layouts/LayoutBase.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
 
-      <Route path='/' element={<HomePage />} />
-      <Route path='/prueba' element={<App />} />
+      <Route element={<LayoutBase />}>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/prueba' element={<App />} />
+      </Route>
+
       <Route path='/products' element={<ProductsPage />} />
       <Route path='/products/:id' element={<ProductDetailPage />} />
 
