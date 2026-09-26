@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 export const useCartStore = create(
-  (set) => ({
+  (set, get) => ({
     // Estado INICIAL
     cart: [
       // { id: 1, title: 'product 1', quantity: 1 },
@@ -9,6 +9,35 @@ export const useCartStore = create(
     ],
     // Actions
     addToCart: (newProduct) => {
+      // ¿Existe el nuevo producto en el carrito de commpras?
+      const currentCartState = get().cart
+
+      const productInCartindex = currentCartState.findIndex(
+        product => product.id === newProduct.id
+      )
+
+      console.log(productInCartindex)
+
+      if (productInCartindex >= 0) { // Si encontramos el producto
+        // Añadir la lógica para cuando el producto ya existe en el carrito de compras
+        const newCart = currentCartState.map(product => {
+          if (product.id === newProduct.id) {
+            // Aquí incrementaremos el campo quantity
+            return {
+              ...product,
+              quantity: product.quantity + 1
+            }
+          }
+
+          return product
+        })
+
+        set(() => ({ cart: newCart }))
+
+        return
+      }
+
+      // Esta línea se ejecuta cuando el producto es nuevo en el carrito de compras
       set((state) => ({ cart: [...state.cart, { ...newProduct, quantity: 1 }] }))
     }
   })
