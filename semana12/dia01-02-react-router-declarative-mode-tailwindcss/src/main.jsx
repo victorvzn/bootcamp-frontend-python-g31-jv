@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage.jsx'
 import ProductsPage from './pages/ProductsPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage.jsx'
 import LayoutBase from './layouts/LayoutBase.jsx'
+import LayoutProducts from './layouts/LayoutProducts.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -19,8 +20,10 @@ createRoot(document.getElementById('root')).render(
         <Route path='/prueba' element={<App />} />
       </Route>
 
-      <Route path='/products' element={<ProductsPage />} />
-      <Route path='/products/:id' element={<ProductDetailPage />} />
+      <Route element={<LayoutProducts />}>
+        <Route path='/products' element={<ProductsPage />} />
+        <Route path='/products/:id' element={<ProductDetailPage />} />
+      </Route>
 
       {/* TODO: Crear un ruta llamada "/acerca-de-mi" con sus nombre y apellidos */}
 
