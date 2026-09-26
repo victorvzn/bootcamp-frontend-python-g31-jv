@@ -1,9 +1,15 @@
 import { useCartStore } from "../store/cart"
 
 const ShoppingCart = () => {
-  const { cart } = useCartStore()
+  const { cart, clearCart, removeFromCart } = useCartStore()
 
-  const total = 0
+  const total = cart.reduce((accumulator, product) => {
+    const qty = product.quantity
+    const price = product.price
+    const subTotal = qty * price
+
+    return accumulator + subTotal
+  }, 0)
 
   return (
     <section className="w-56 p-2">
@@ -17,6 +23,7 @@ const ShoppingCart = () => {
       <div className="mb-2">
         <button
           className="bg-red-400 p-2 min-w-36 rounded-lg cursor-pointer text-white font-bold hover:bg-red-500 duration-300 w-full"
+          onClick={clearCart}
         >
           Limpiar carrito
         </button>
@@ -33,6 +40,7 @@ const ShoppingCart = () => {
               <span>S/{product.price} (Qty: {product.quantity})</span>
               <button
                 className="bg-red-400 p-2 rounded-lg cursor-pointer text-white font-bold hover:bg-red-500 duration-300"
+                onClick={() => removeFromCart(product.id)}
               >
                 ❌
               </button>

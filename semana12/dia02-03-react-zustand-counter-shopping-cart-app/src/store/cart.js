@@ -39,6 +39,18 @@ export const useCartStore = create(
 
       // Esta línea se ejecuta cuando el producto es nuevo en el carrito de compras
       set((state) => ({ cart: [...state.cart, { ...newProduct, quantity: 1 }] }))
+    },
+    clearCart: () => {
+      // Limpiar el carrito de compras
+      set(() => ({ cart: [] }))
+    },
+    removeFromCart: (id) => {
+      // Remover el producto usando el id que tenemos en el parámetro de la función
+      set(state => {
+        const newCart = state.cart.filter(product => product.id !== id)
+
+        return { cart: newCart }
+      })
     }
   })
 )
