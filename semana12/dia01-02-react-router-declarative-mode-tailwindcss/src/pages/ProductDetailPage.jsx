@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router'
+import { getProduct } from '../services/products'
 
 const ProductDetailPage = () => {
   const { id } = useParams()
@@ -9,13 +10,6 @@ const ProductDetailPage = () => {
   const navigate = useNavigate()
 
   // TODO: Imprimir los datos del producto(ej. title, descripción, price, thumbnail y marca) en el return de este producto
-
-  const getProduct = async (id) => {
-    const response = await fetch(`https://dummyjson.com/products/${id}`)
-    // const response = await fetch('https://dummyjson.com/products/' + id) // ❌ No es seguro
-
-    return await response.json()
-  }
 
   useEffect(() => {
     getProduct(id)
