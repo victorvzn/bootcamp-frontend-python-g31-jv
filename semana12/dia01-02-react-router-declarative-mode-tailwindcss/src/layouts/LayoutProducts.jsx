@@ -17,6 +17,8 @@ const LayoutProducts = () => {
         </div>   
       </header>
 
+      
+
       <main className="container mx-auto m-6">
         <Outlet />
       </main>
